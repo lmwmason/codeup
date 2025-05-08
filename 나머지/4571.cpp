@@ -21,4 +21,5 @@ int main()
     }
     if(sum==0) cout<<-1;
     else cout<<sum<<"\n"<<min_;
+    return 0;
 }
