@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 
 using namespace std;
 
@@ -25,4 +25,42 @@ int main()
     }
 
     cout<<max_;
+}*/
+
+
+#include <iostream>
+#include <cstdio>
+
+using namespace std;
+
+int cnt=0;
+int check[5]={};
+void f(int n)
+{
+    if(n==6)
+    {
+        cnt++;
+        return;
+    }
+    for(int i=1; i<=5; i++)
+    {
+        if(check[i])
+            continue;
+        check[i]=1;
+        f(n+1);
+        check[i]=0;
+    }
+}
+
+int main()
+{
+    int k;
+
+    scanf("%d", &k);
+
+    f(1);
+
+    printf("%d", cnt);
+
+    return 0;
 }
